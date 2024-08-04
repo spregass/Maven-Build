@@ -11,3 +11,4 @@ public class Thing {
     this.n = n;
   }
 }
+
