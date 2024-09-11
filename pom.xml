@@ -35,24 +35,15 @@
             </plugin>
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.5.0</version>
+                <artifactId>cargo-maven3-plugin</artifactId>
                 <configuration>
-                   <container>
-                     <containerId>tomcat8x</containerId>
-                     <type>remote</type>
-                   </container>
-                   <configuration>
-                      <type>runtime</type>
-                      <properties>
-                         <cargo.remote.username>tomcat</cargo.remote.username>
-                         <cargo.remote.password>password</cargo.remote.password>
-                         <cargo.tomcat.manager.url>http://localhost:9090/host-manager/html
-                                                          </cargo.tomcat.manager.url>
-                      </properties>
-                   </configuration>
-                 </configuration>
-              </plugin>
+                    <properties>
+                        <cargo.remote.uri>jhttp://localhost:9090/host-manager/html</cargo.remote.uri>
+                        <cargo.remote.username>tomcat</cargo.remote.username>
+                        <cargo.remote.password>password</cargo.remote.password>
+                   </properties>
+               </configuration>
+           </plugin>
         </plugins>
   </build>
 </project>
